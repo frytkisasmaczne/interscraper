@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+<title>{{ title }}</title>
+<!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
+</head>
+<body>
+<form action="/search">
+  <select name="from">
+    {% for station in stations %}
+    <option value="{{ station["id"] }}">{{ station["name"] }}</option>
+    {% endfor %}
+  </select>
+  <select name="to">
+    {% for station in stations %}
+    <option value="{{ station["id"] }}">{{ station["name"] }}</option>
+    {% endfor %}
+  </select>
+  <input type="submit" value="desu">
+</form>
+</body>
