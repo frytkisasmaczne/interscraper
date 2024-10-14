@@ -14,7 +14,7 @@ def index():
 
 @app.route("/search")
 def search():
-    return render_template("search.html", title="majomajo", results=ic.getWholeMonth(session, request.args.get("from"), request.args.get("to")))
+    return render_template("search.html", title="majomajo", results=ic.getEntireMonth(session, request.args.get("from"), request.args.get("to")))
 
 
 @app.route("/debug/stations")

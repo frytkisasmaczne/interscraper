@@ -4,9 +4,16 @@
 <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
 </head>
 <body>
-<ol>
+<table>
   {% for result in results %}
-  <li>{{ result }}</li>
+  <tr>
+    <td>{{ result["depart"] }}</td>
+    <td>{{ result["arrive"] }}</td>
+    <td>{{ result["price"]/100 }}zł</td>
+    <td>kl.{{ result["class"] }}</td>
+    <td><a href="{{ result["koleo"] }}">koleo</a></td>
+  </tr>
   {% endfor %}
+</table>
 <ol>
 </body>
